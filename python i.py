@@ -12,7 +12,7 @@ else:
     directory = "/".join(fulldir.split("/")[:-1]) 
     directory = re.sub("^~/", "", directory)
     #dialog.info_dialog("hi", directory)
-    cmdstring = "gnome-terminal --working-directory=\""+directory+"\" --command \"python3 -i "+filename+"\" --title \""+filename+"\" &"
+    cmdstring = "gnome-terminal --working-directory=\""+directory+"\" --command \"python3 -i \\\""+filename+"\\\"\" --title \""+filename+"\" &"
     #dialog.info_dialog("hi", cmdstring)
     system.exec_command(cmdstring)
 
